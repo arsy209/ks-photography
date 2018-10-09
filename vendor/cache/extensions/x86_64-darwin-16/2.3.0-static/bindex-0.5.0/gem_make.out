@@ -1,0 +1,15 @@
+current directory: /Users/Multani/Desktop/ks-photography/vendor/cache/gems/bindex-0.5.0/ext/bindex
+/Users/multani/.rbenv/versions/2.3.1/bin/ruby -r ./siteconf20181009-51501-2rib2r.rb extconf.rb
+creating Makefile
+
+current directory: /Users/Multani/Desktop/ks-photography/vendor/cache/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" clean
+
+current directory: /Users/Multani/Desktop/ks-photography/vendor/cache/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR="
+compiling cruby.c
+linking shared-object bindex/cruby.bundle
+
+current directory: /Users/Multani/Desktop/ks-photography/vendor/cache/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" install
+/usr/local/bin/ginstall -c -m 0755 cruby.bundle ./.gem.20181009-51501-1hwp9zg/bindex
