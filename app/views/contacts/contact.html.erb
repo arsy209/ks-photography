@@ -26,32 +26,34 @@
                 <a class="entry" href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus"></i></a>
               </div>
               <div class="empty-space col-xs-b25 col-sm-b50"></div>
-              <form class="contact-form">
-                <div class="row">
-                  <div class="col-sm-6">
-                    <div class="simple-input-wrapper">
-                      <input class="simple-input" value="" type="text" placeholder="Name" name="name" />
-                      <span></span>
+              <%= form_for :anything, url: email_form_path do |f| %>
+                <form class="contact-form">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="simple-input-wrapper">
+                        <%= f.text_field :name,:class => 'simple-input',:id => "text_field" , :required => true, :placeholder => "Name" %>
+                        <span></span>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="simple-input-wrapper">
+                        <%= f.text_field :email,:class => 'simple-input',:id => "text_field" , :required => true, :placeholder => "Email" %>
+                        <span></span>
+                      </div>
                     </div>
                   </div>
-                  <div class="col-sm-6">
-                    <div class="simple-input-wrapper">
-                      <input class="simple-input" value="" type="text" placeholder="Email" name="email" />
-                      <span></span>
-                    </div>
+                  <div class="simple-input-wrapper">
+                    <%= f.text_field :phone_number,:class => 'simple-input',:id => "text_field" , :required => true, :placeholder => "Phone Number" %>
+                    <span></span>
                   </div>
-                </div>
-                <div class="simple-input-wrapper">
-                  <input class="simple-input" value="" type="text" placeholder="Subject" name="subject" />
-                  <span></span>
-                </div>
-                <div class="simple-input-wrapper">
-                  <textarea class="simple-input" placeholder="Type your text" name="message"></textarea>
-                  <span></span>
-                </div>
-                <div class="empty-space col-xs-b10"></div>
-                <div class="button">submit<input type="submit"/></div>
-              </form>
+                  <div class="simple-input-wrapper">
+                    <%= f.text_area :body,:rows =>"10", :cols=>"100",:class => 'simple-input',:style=>"resize:none",:id => "message" , :required => true , :placeholder => " Message"%>
+                    <span></span>
+                  </div>
+                  <div class="empty-space col-xs-b10"></div>
+                  <div class="button">submit<input type="submit"/></div>
+                </form>
+              <% end %>
             <div class="empty-space col-xs-b30"></div>
         </div>
       </div>
