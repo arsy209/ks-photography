@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get "/contacts", to: "contacts#contact"
   post "email_form", to: "contacts#create"
   get "/about_us" ,to: "home#about_us"
-  get "/portfolio" ,to: "portfolio#index"
+  get "/albums" ,to: "portfolio#index"
 
   resources :portfolio
 end
